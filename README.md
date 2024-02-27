@@ -1,5 +1,6 @@
 # AzureNSG_BlockListUpdate
-works with ScreenConnect Blocklist and updates a VM's Network Security Group (NSG) with a fresh rule to block in and outbound traffic.\
+Works with ScreenConnect Blocklist and updates a VM's Network Security Group (NSG) with a fresh rule to block in and outbound traffic.
+should help mitigate password spraying attacks.
 
 # Prerequisites
 - Powershell7
@@ -38,3 +39,5 @@ works with ScreenConnect Blocklist and updates a VM's Network Security Group (NS
 UpdateNSG.ps1 -BlockListPath <path to blocklist>
 ```
 with any luck the VM will just work out everything and update the NSG assigned to its network interface card.
+
+use at your own risk. if you manage to lock yourself out, you should be able to just delete the rules created.
